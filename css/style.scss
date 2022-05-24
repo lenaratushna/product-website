@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'reset';
+
+$primaryColor: #02897a;
+//$primaryTextColor: #22343D;
+//$primaryBgColor: #fff;
+//$secondaryBgColor: #EDEDED;
+$maxWidth: 1440;
+
+:root {
+	--text-color: #22343d;
+	--primary-bg: #ffffff;
+	--secondary-bg: #ededed;
+}
+
+[dark] {
+	--text-color: #ffffff;
+	--primary-bg: #1f2e35;
+	--secondary-bg: #30444e;
+	--toggle-bg: #f3f3f3;
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(
+		#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+	);
+}
+
+body {
+	background-color: var(--primary-bg);
+	font-family: 'Poppins', sans-serif;
+	@include adaptiv-font(16, 14);
+	font-weight: 400;
+	color: var(--text-color);
+	transition: all 0.3s;
+    overflow-x: hidden;
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 20px;
+    @media (max-width:320px) {
+        padding: 0 15px;
+    }
+}
+
+.btn {
+	display: block;
+    min-width: 110px;
+	background-color: $primaryColor;
+	color: #fff;
+	border: 1px solid $primaryColor;
+	border-radius: 4px;
+	padding: 14px 24px;
+	transition: scale 0.5s ease-in;
+	&:hover {
+		transform: scale(0.95);
+	}
+}
+
+.btn-outline {
+	background-color: transparent;
+	color: var(--text-color);
+	border: 1px solid #bcd0e5;
+}
+
+.header {
+	position: relative;
+	z-index: 99;
+	transition: all 0.3s;
+	background-color: var(--secondary-bg);
+	padding: 19px 0 18px;
+	@media (max-width: 991px) {
+		box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo-icon {
+		width: 40px;
+		height: 36px;
+	}
+
+	&__logo-text {
+		color: var(--text-color);
+		font-weight: 700;
+		font-size: 30px;
+		margin-left: 16px;
+		@media (max-width: 480px) {
+			margin-left: 8px;
+		}
+	}
+
+	&__menu-list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu-link {
+        display: block;
+        margin-right: 24px;
+		font-size: 16px;
+		color: var(--text-color);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__menu-link--active {
+		font-weight: 600;
+	}
+
+    &__menu-btns {
+        display: flex;
+        margin-right: 24px;
+    }
+
+    &__menu-btn:first-child {
+        margin-right: 24px;
+    }
+
+	&__menu-burger {
+		display: none;
+	}
+}
+
+.toggle-theme {
+	cursor: pointer;
+}
+
+.burger-menu {
+	flex-direction: column;
+	justify-content: space-between;
+    align-items: flex-start;
+	width: 24px;
+	height: 20px;
+	cursor: pointer;
+	&__line {
+		display: block;
+		background-color: var(--text-color);
+		height: 4px;
+		width: 100%;
+		border-radius: 3px;
+        transition: all .6s ease;
+        &:nth-child(2) {
+            transition: opacity .5s ease-in-out;
+        }
+	}
+}
+
+@media (max-width: 991px) {
+	.header {
+		&__menu-list {
+			position: absolute;
+            padding: 20px;
+			width: 100vw;
+			top: 74px;
+			left: 0;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: flex-start;
+			background-color: var(--secondary-bg);
+            transition: transform .5s ease-in-out;
+            transform: translateX(100%);
+            @media (max-width:320px) {
+                padding: 15px;
+            }
+		}
+
+        &__menu-list.active {
+            transform: translateX(0%);
+        }
+
+		&__menu-link {
+			margin-right: 0;
+            margin-bottom: 24px;
+		}
+
+        &__menu-btns {
+            margin-right: 0;
+        }
+
+		&__menu-burger {
+			display: flex;
+		}
+	}
+
+    .burger-menu.active {
+        height: 24px;
+        .burger-menu__line:first-child {
+            width: 120%;
+            transform: translate(-2px, 10px)  rotate(45deg);
+        }
+        .burger-menu__line:nth-child(2) {
+            opacity: 0;
+        }
+        .burger-menu__line:last-child {
+            width: 120%;
+            transform: translate(-2px, -10px) rotate(-45deg);
+        }
+    }
+
+	.toggle-theme {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+}
