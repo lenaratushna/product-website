@@ -30,6 +30,7 @@ body {
 	line-height: 1.6;
 	font-weight: 400;
 	color: var(--text-color);
+    position: relative;
 }
 
 .container {
@@ -65,6 +66,7 @@ body {
 	min-width: 110px;
 	background-color: $primaryColor;
 	color: #fff;
+    font-weight: 700;
 	border: 1px solid $primaryColor;
 	border-radius: 4px;
 	padding: 14px 24px;
@@ -94,6 +96,9 @@ body {
 }
 
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 	background-color: var(--secondary-bg);
 	padding: 19px 0 18px;
 	@media (max-width: 991px) {
@@ -149,9 +154,12 @@ body {
 		margin-right: 24px;
 	}
 
-	&__menu-btn:first-child {
-		margin-right: 24px;
-	}
+	&__menu-btn {
+        font-weight: 400;
+        &:first-child {
+            margin-right: 24px;
+        }
+    }
 
 	&__menu-burger {
 		display: none;
@@ -188,7 +196,7 @@ body {
 			position: fixed;
 			z-index: 99;
 			padding: 20px;
-			width: 100vw;
+			width: 100%;
 			top: 74px;
 			left: 0;
 			flex-direction: column;
@@ -245,7 +253,7 @@ body {
 
 .start {
 	background-color: var(--secondary-bg);
-	padding: 30px 0 50px;
+	padding: 125px 0 50px;
 	&__container {
 		display: flex;
 		align-items: center;
@@ -292,7 +300,7 @@ body {
 @media (max-width: 900px) {
 	.start {
 		background-color: var(--secondary-bg);
-		padding: 30px 0 50px;
+		padding: 125px 0 50px;
 		&__container {
 			flex-direction: column-reverse;
 		}
@@ -454,7 +462,6 @@ body {
         grid-template-columns: repeat(2, auto);
         gap: 100px 70px;
         align-items: center;
-        justify-items: center;
     }
 
     &__content {
@@ -520,6 +527,7 @@ body {
         padding: 80px 0 50px; 
         &__container {
             grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
             gap: 80px;
         }
 
@@ -531,8 +539,141 @@ body {
    .servises-item:nth-child(2) {
         grid-row: 1;
     }
-    
+
     .servises-item:nth-child(6) {
         grid-row: 5;
     }
 }
+
+.experts {
+    background-color: var(--secondary-bg);
+    padding: 100px 0 60px;
+    @media (max-width: 991px) { 
+        padding: 80px 0 50px;
+    }
+    &__container {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 542px;
+        margin-bottom: 32px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__item-img {
+        width: 98px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__item-text {
+        position: relative;
+        padding: 15px 24px;
+        background-color: #fff;
+        box-shadow: 0px 2px 8px rgba(86, 117, 146, 0.1);
+        border-radius: 26px;
+        color: #2F281E;
+        font-weight: 500;
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 17px;
+            height: 17px;
+            background-color: #fff;
+            bottom: -8px;
+            left: 32px;
+            border-radius: 50%;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 9px;
+            height: 9px;
+            background-color: #fff;
+            bottom: -17px;
+            left: 21px;
+            border-radius: 50%;
+        }
+    }
+
+    .left-text {
+        &::before {
+            left: initial;
+            right: 32px;
+        }
+
+        &::after {
+            left: initial;
+            right: 21px;
+        }
+    }
+
+    &__btn {
+        margin-top: 58px;
+    }
+}
+
+@media(max-width: 880px) {
+    .experts {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__col {
+            gap: 30px;
+            &:last-child {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column-reverse; 
+            }
+        }
+
+        &__item {
+            justify-content: center;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .experts {
+        &__item {
+            gap: 10px;
+        }
+
+        &__item-text {
+            padding: 8px 12px; 
+        }
+
+        &__item-img {
+            width: 70px;
+        }
+    }
+}
+
