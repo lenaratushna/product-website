@@ -24,7 +24,7 @@ menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
 
-//scroll header style
+//scrolled header style
 const header =  document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
