@@ -24,3 +24,13 @@ menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
 
+//scroll header style
+const header =  document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 15) {
+        header.style.boxShadow = '0px -2px 8px rgba(0, 0, 0, 0.25)';
+    } else {
+        header.style.boxShadow = '';
+    }
+});
