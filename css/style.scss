@@ -69,11 +69,18 @@ body {
     font-weight: 700;
 	border: 1px solid $primaryColor;
 	border-radius: 4px;
+    text-align: center;
 	padding: 14px 24px;
 	transition: scale 0.5s ease-in;
 	&:hover {
 		transform: scale(0.95);
 	}
+}
+
+.btn-reverse {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: $primaryColor;
 }
 
 .btn-outline {
@@ -156,6 +163,7 @@ body {
 
 	&__menu-btn {
         font-weight: 400;
+        padding: 10px 25px;
         &:first-child {
             margin-right: 24px;
         }
@@ -197,7 +205,7 @@ body {
 			z-index: 99;
 			padding: 20px;
 			width: 100%;
-			top: 74px;
+			top: 85px;
 			left: 0;
 			flex-direction: column;
 			justify-content: space-around;
@@ -677,3 +685,110 @@ body {
     }
 }
 
+.prices {
+    background-color: var(--secondary-bg);
+    padding: 90px 0 60px;
+    @media (max-width: 991px) { 
+        padding: 70px 0 50px;
+    }
+
+    &__container {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        margin-bottom: 50px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        max-width: 320px;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 24px 10px 32px;
+        &:nth-child(even) {
+            background: $primaryColor;
+            color: #FFFFFF;
+        }
+    }
+
+    &__item-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 8px;
+    }
+
+    &__item-text {
+        margin-bottom: 16px;
+    }
+
+    &__item-price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 16px;
+        &_num {
+            font-weight: 700;
+            font-size: 76px;
+            line-height: 100px;
+            margin-right: 8px;
+            color: $primaryColor;
+        }
+
+        &_curr {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            color: $primaryColor;
+        }
+
+        &_period {
+            color: #AFAFAF;
+        }
+    }
+    &__item-btn {
+        margin-top: 22px;
+    }
+}
+
+.prices__item:nth-child(even) {
+    .prices__item-price_num,
+    .prices__item-price_curr,
+    .prices__item-price_period {
+        color: #FFFFFF;
+    } 
+}
+
+@media (max-width:420px) {
+    .prices {
+        &__wrapper {
+            gap: 32px;
+        }
+
+        &__item-text {
+            margin-bottom: 10px;
+        }
+
+        &__item-price {
+            margin-bottom: 10px;
+            &_num {
+                font-size: 60px;
+                line-height: 80px;
+            }
+        }
+    }
+}
