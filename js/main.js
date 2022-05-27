@@ -34,3 +34,14 @@ window.addEventListener('scroll', () => {
         header.style.boxShadow = '';
     }
 });
+
+//spoilers
+const questionTitles = document.querySelectorAll('.questions__item-title');
+
+questionTitles.forEach(title => {
+    title.addEventListener('click', () => {
+        title.classList.toggle('active');
+        title.nextElementSibling.classList.toggle('active');
+    });
+})
+    

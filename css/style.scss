@@ -7,6 +7,7 @@ $primaryColor: #02897a;
 	--text-color: #22343d;
 	--primary-bg: #ffffff;
 	--secondary-bg: #ededed;
+    --border-color: #E7E7E7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +15,7 @@ $primaryColor: #02897a;
         --text-color: #ffffff;
         --primary-bg: #1f2e35;
         --secondary-bg: #30444e;
+        --border-color: #474747;
     }
 }
 
@@ -21,6 +23,7 @@ $primaryColor: #02897a;
 	--text-color: #ffffff;
 	--primary-bg: #1f2e35;
 	--secondary-bg: #30444e;
+    --border-color: #474747;
 }
 
 body {
@@ -824,6 +827,76 @@ body {
 
     &__text {
         margin-bottom: 32px;
+    }
+}
+
+.questions {
+    padding: 100px 0 53px;
+    @media(max-width: 991px) {
+        padding: 70px 0 50px;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 50px;
+        @media(max-width: 420px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__wrapper {
+        max-width: 920px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    &__item-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 16px 0 22px 40px;
+        @media(max-width: 767px) {
+            padding: 16px 0 16px 40px;
+        }
+        cursor: pointer;
+        &::before {
+            position: absolute;
+            left: 0;
+            content: '+';
+            font-size: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+        }
+        &.active::before {
+            content: '-';
+        }
+    }
+
+    &__item-text {
+        display: none;
+        padding-bottom: 24px;
+        @media(max-width: 420px) {
+            padding: 0 10px 16px 10px;
+        }
+        &.active {
+            display: block;
+        }
     }
 }
 
