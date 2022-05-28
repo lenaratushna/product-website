@@ -219,7 +219,7 @@ body {
 			align-items: flex-start;
 			background-color: var(--secondary-bg);
 			transition: transform 0.5s ease-in-out;
-			transform: translateX(100%);
+			transform: translateX(110%);
 			box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
 			@media (max-width: 320px) {
 				padding: 15px;
@@ -809,10 +809,82 @@ body {
     }
 }
 
+.box {
+    background-color: var(--secondary-bg);
+    padding: 90px 0 50px;
+    @media (max-width: 991px) { 
+        padding: 70px 0 50px;
+    }
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 968px;
+        background-color: $primaryColor;
+        border-radius: 32px;
+        color: #fff;
+        padding: 10px 0 10px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 48px;
+    }
+
+    &__btn {
+        width: 150px;
+    }
+}
+
+@media (max-width: 880px) {
+    .box {
+        &__wrapper {
+            max-width: 600px;
+            flex-direction: column;
+            padding: 50px 50px 10px 50px;
+        }
+
+        &__content {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .box {
+        &__wrapper {
+            max-width: 500px;
+            padding: 30px 30px 10px 30px;
+            @media(max-width:480px) { 
+                padding: 25px 20px 0px 20px;
+            }
+        }
+
+        &__title {
+            font-size: 26px;
+            line-height: 38px;
+            margin-bottom: 48px;
+        }
+    
+        &__img {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
 .enterprise {
-    padding: 53px 0;
     background-color: var(--secondary-bg);
     text-align: center;
+    padding: 90px 0 50px;
+    @media (max-width: 991px) { 
+        padding: 70px 0 50px;
+    }
     &__subtitle {
         font-weight: 600;
         font-size: 24px;
@@ -831,6 +903,7 @@ body {
 }
 
 .questions {
+    background-color: var(--secondary-bg);
     padding: 100px 0 53px;
     @media(max-width: 991px) {
         padding: 70px 0 50px;

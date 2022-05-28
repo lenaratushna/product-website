@@ -267,8 +267,8 @@ body {
     transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(110%);
+            transform: translateX(110%);
     -webkit-box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
             box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25); } }
   @media (max-width: 991px) and (max-width: 320px) {
@@ -736,10 +736,68 @@ body {
     .prices__item-price_num {
       font-size: 60px;
       line-height: 80px; } }
-.enterprise {
-  padding: 53px 0;
+.box {
   background-color: var(--secondary-bg);
-  text-align: center; }
+  padding: 90px 0 50px; }
+  @media (max-width: 991px) {
+    .box {
+      padding: 70px 0 50px; } }
+  .box__wrapper {
+    margin: 0 auto;
+    max-width: 968px;
+    background-color: #02897a;
+    border-radius: 32px;
+    color: #fff;
+    padding: 10px 0 10px 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .box__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 48px; }
+  .box__btn {
+    width: 150px; }
+
+@media (max-width: 880px) {
+  .box__wrapper {
+    max-width: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 50px 50px 10px 50px; }
+  .box__content {
+    text-align: center;
+    margin-bottom: 32px; } }
+@media (max-width: 767px) {
+  .box__wrapper {
+    max-width: 500px;
+    padding: 30px 30px 10px 30px; } }
+  @media (max-width: 767px) and (max-width: 480px) {
+    .box__wrapper {
+      padding: 25px 20px 0px 20px; } }
+@media (max-width: 767px) {
+  .box__title {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 48px; }
+  .box__img img {
+    width: 100%; } }
+.enterprise {
+  background-color: var(--secondary-bg);
+  text-align: center;
+  padding: 90px 0 50px; }
+  @media (max-width: 991px) {
+    .enterprise {
+      padding: 70px 0 50px; } }
   .enterprise__subtitle {
     font-weight: 600;
     font-size: 24px;
@@ -752,6 +810,7 @@ body {
     margin-bottom: 32px; }
 
 .questions {
+  background-color: var(--secondary-bg);
   padding: 100px 0 53px; }
   @media (max-width: 991px) {
     .questions {
