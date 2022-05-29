@@ -109,6 +109,26 @@ body {
 	}
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 40px;
+        height: 36px;
+    }
+
+    &__text {
+        color: var(--text-color);
+        font-weight: 700;
+        font-size: 30px;
+        margin-left: 16px;
+        @media (max-width: 480px) {
+            margin-left: 8px;
+        }
+    }
+}
+
 .header {
     position: fixed;
     width: 100%;
@@ -122,26 +142,6 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-
-	&__logo {
-		display: flex;
-		align-items: center;
-	}
-
-	&__logo-icon {
-		width: 40px;
-		height: 36px;
-	}
-
-	&__logo-text {
-		color: var(--text-color);
-		font-weight: 700;
-		font-size: 30px;
-		margin-left: 16px;
-		@media (max-width: 480px) {
-			margin-left: 8px;
-		}
 	}
 
 	&__menu-list {
@@ -974,5 +974,98 @@ body {
 }
 
 .light-bg {
-    background-color: var(--primary-bg)
+    background-color: var(--primary-bg);
+}
+
+.footer {
+    background-color: var(--secondary-bg);
+    padding: 90px 0 20px;
+    @media (max-width: 991px) { 
+        padding: 50px 0 20px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__logo-icon {
+        width: 32px;
+        height: 30px;
+    }
+
+    &__logo-text {
+        margin-left: 10px;
+        font-size: 24px;
+    }
+
+    &__social-btns {
+        margin-top: 25px;
+    }
+
+    &__social-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #EDFFFC;
+        transition: all .3s ease;
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__menu-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 8px;
+    }
+
+    &__menu-item:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    &__menu-link {
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+
+    &__form-text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 280px;
+        margin-bottom: 34px;
+    }
+
+    &__form-email {
+        display: block;
+        max-width: 325px;
+        width: 100%;
+        border: 1px solid #BCD0E5;
+        border-radius: 4px;
+        padding: 10px 14px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+        font-size: inherit;
+        margin-bottom: 21px;
+    }
+
+    &__form-submit {
+        padding: 7px 15px;
+    }
+
+    &__bottom {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 13px;
+    }
 }
