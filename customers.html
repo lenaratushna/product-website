@@ -1,150 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
 
-<body>
-    <header class="header light-bg">
-        <div class="header__container container">
-            <a href="#" class="logo">
-                <img src="./images/logo-icon.svg" alt="Product" class="logo__icon">
-                <span class="logo__text">Product</span>
-            </a>
-            <nav class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item">
-                        <a href="index.html" class="header__menu-link">Product</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-link header__menu-link--active">Customers</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="./pricing.html" class="header__menu-link">Pricing</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-link">Resources</a>
-                    </li>
-                    <li class="header__menu-btns">
-                        <a href="" class="header__menu-btn btn btn-outline">Sign In</a>
-                        <a href="" class="header__menu-btn btn">Sign Up</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <div class="toggle-theme">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="16" fill="#F3F3F3"/>
-                                <path d="M16 26C21.514 26 26 21.514 26 16C26 10.486 21.514 6 16 6C10.486 6 6 10.486 6 16C6 21.514 10.486 26 16 26ZM16 8C20.411 8 24 11.589 24 16C24 20.411 20.411 24 16 24C11.589 24 8 20.411 8 16C8 11.589 11.589 8 16 8Z" fill="#02897A"/>
-                                <path d="M23 16C23 12.134 19.865 9 16 9V23C19.865 23 23 19.866 23 16Z" fill="#02897A"/>
-                            </svg>
-                        </div>
-                    </li>
-                </ul>
-                <div class="header__menu-burger burger-menu">
-                    <span class="burger-menu__line"></span>
-                    <span class="burger-menu__line"></span>
-                    <span class="burger-menu__line"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+	<body>
+		<header class="header light-bg">
+			<div class="header__container container">
+				<a href="#" class="logo">
+					<img src="./images/logo-icon.svg" alt="Product" class="logo__icon" />
+					<span class="logo__text">Product</span>
+				</a>
+				<nav class="header__menu">
+					<ul class="header__menu-list">
+						<li class="header__menu-item">
+							<a href="index.html" class="header__menu-link">Product</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="" class="header__menu-link header__menu-link--active"
+								>Customers</a
+							>
+						</li>
+						<li class="header__menu-item">
+							<a href="./pricing.html" class="header__menu-link">Pricing</a>
+						</li>
+						<li class="header__menu-item">
+							<a href="" class="header__menu-link">Resources</a>
+						</li>
+						<li class="header__menu-btns">
+							<a href="" class="header__menu-btn btn btn-outline">Sign In</a>
+							<a href="" class="header__menu-btn btn">Sign Up</a>
+						</li>
+						<li class="header__menu-item">
+							<div class="toggle-theme">
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 32 32"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect width="32" height="32" rx="16" fill="#F3F3F3" />
+									<path
+										d="M16 26C21.514 26 26 21.514 26 16C26 10.486 21.514 6 16 6C10.486 6 6 10.486 6 16C6 21.514 10.486 26 16 26ZM16 8C20.411 8 24 11.589 24 16C24 20.411 20.411 24 16 24C11.589 24 8 20.411 8 16C8 11.589 11.589 8 16 8Z"
+										fill="#02897A"
+									/>
+									<path
+										d="M23 16C23 12.134 19.865 9 16 9V23C19.865 23 23 19.866 23 16Z"
+										fill="#02897A"
+									/>
+								</svg>
+							</div>
+						</li>
+					</ul>
+					<div class="header__menu-burger burger-menu">
+						<span class="burger-menu__line"></span>
+						<span class="burger-menu__line"></span>
+						<span class="burger-menu__line"></span>
+					</div>
+				</nav>
+			</div>
+		</header>
 
-    <main class="main">
-        <section class="clients">
-            <div class="container">
-                <h2 class="clients__title section-title">Our Clients</h2>
-                <div class="clients__wrapper">
-                    <img src="./images/airbnb-logo.svg" alt="airbnb" class="clients__img">
-                    <img src="./images/google-logo.svg" alt="google" class="clients__img">
-                    <img src="./images/microsoft-logo.svg" alt="microsoft" class="clients__img">
-                    <img src="./images/FedEx-logo.svg" alt="FedEx" class="clients__img">
-                </div>
-            </div>
-        </section>
+		<main class="main">
+			<section class="clients">
+				<div class="container">
+					<h2 class="clients__title section-title">Our Clients</h2>
+					<div class="clients__wrapper">
+						<img
+							src="./images/airbnb-logo.svg"
+							alt="airbnb"
+							class="clients__img"
+						/>
+						<img
+							src="./images/google-logo.svg"
+							alt="google"
+							class="clients__img"
+						/>
+						<img
+							src="./images/microsoft-logo.svg"
+							alt="microsoft"
+							class="clients__img"
+						/>
+						<img
+							src="./images/FedEx-logo.svg"
+							alt="FedEx"
+							class="clients__img"
+						/>
+					</div>
+				</div>
+			</section>
 
-        <section class="box">
-            <div class="container">
-                <div class="box__wrapper">
-                    <div class="box__content">
-                        <h2 class="box__title">Join 100 Compannies who boost their business with Product</h2>
-                        <a href="#!" class="box__btn btn btn-reverse">Get This</a>
-                    </div>
-                    <div class="box__img">
-                        <img src="./images/screen.png" alt="img">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+			<section class="benefits">
+				<div class="container">
+					<h2 class="benefits__title section-title">Why Choose Product?</h2>
+					<div class="benefits__wrapper">
+						<div class="benefits__item">
+							<div class="benefits__item-icon">
+								<img src="./images/arrow.svg" alt="arrow" />
+							</div>
+							<h3 class="benefits__item-title">Special Business</h3>
+							<p class="benefits__item-text">
+								Product helps you see how many more days you need to work to
+								reach your financial goal for the month and year.
+							</p>
+						</div>
+						<div class="benefits__item">
+							<div class="benefits__item-icon">
+								<img src="./images/design.svg" alt="design" />
+							</div>
+							<h3 class="benefits__item-title">Instant Result</h3>
+							<p class="benefits__item-text">
+								Product helps you see how many more days you need to work to
+								reach your financial goal for the month and year.
+							</p>
+						</div>
+						<div class="benefits__item">
+							<div class="benefits__item-icon">
+								<img src="./images/heart.svg" alt="heart" />
+							</div>
+							<h3 class="benefits__item-title">Fastest way to organize</h3>
+							<p class="benefits__item-text">
+								Product helps you see how many more days you need to work to
+								reach your financial goal for the month and year.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer__col">
-                    <a href="index.html" class="footer__logo logo">
-                        <img src="./images/logo-icon.svg" alt="Product" class="footer__logo-icon logo__icon">
-                        <span class="footer__logo-text logo__text">Product</span>
-                    </a>
-                    <div class="footer__social-btns">
-                        <a href="#!" class="footer__social-btn">
-                            <img src="./images/instagram.svg" alt="instagram">
-                        </a>
-                        <a href="#!" class="footer__social-btn">
-                            <img src="./images/facebook.svg" alt="facebook">
-                        </a>
-                        <a href="#!" class="footer__social-btn">
-                            <img src="./images/twitter.svg" alt="twitter">
-                        </a>
-                    </div>
-                </div>
-                <div class="footer__col">
-                    <nav class="footer__menu">
-                        <ul class="footer__menu-list">
-                            <li class="footer__menu-title">Resource</li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">About Us</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">Blog</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">Contact</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">FAQ</a>
-                            </li>
-                        </ul>
-                        <ul class="footer__menu-list">
-                            <li class="footer__menu-title">Legal Stuff</li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">Disclaimer</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">Financing</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">Privacy Policy</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="#!" class="footer__menu-link">Terms of Service</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="footer__col">
-                    <form class="footer__form">
-                        <p class="footer__form-text">knowing you're always on the best energy deal.</p>
-                        <input type="email" class="footer__form-email">
-                        <input type="submit" class="footer__form-submit btn" value="Sign up Now">
-                    </form>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>Made With Love By Lena R.</p>
-            </div>
-        </div>
-    </footer>
-</body>
+			<section class="box">
+				<div class="container">
+					<div class="box__wrapper">
+						<div class="box__content">
+							<h2 class="box__title">
+								Join 100 Compannies who boost their business with Product
+							</h2>
+							<a href="#!" class="box__btn btn btn-reverse">Get This</a>
+						</div>
+						<div class="box__img">
+							<img src="./images/screen.png" alt="img" />
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__col">
+						<a href="index.html" class="footer__logo logo">
+							<img
+								src="./images/logo-icon.svg"
+								alt="Product"
+								class="footer__logo-icon logo__icon"
+							/>
+							<span class="footer__logo-text logo__text">Product</span>
+						</a>
+						<div class="footer__social-btns">
+							<a href="#!" class="footer__social-btn">
+								<img src="./images/instagram.svg" alt="instagram" />
+							</a>
+							<a href="#!" class="footer__social-btn">
+								<img src="./images/facebook.svg" alt="facebook" />
+							</a>
+							<a href="#!" class="footer__social-btn">
+								<img src="./images/twitter.svg" alt="twitter" />
+							</a>
+						</div>
+					</div>
+					<div class="footer__col">
+						<nav class="footer__menu">
+							<ul class="footer__menu-list">
+								<li class="footer__menu-title">Resource</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">About Us</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">Blog</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">Contact</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">FAQ</a>
+								</li>
+							</ul>
+							<ul class="footer__menu-list">
+								<li class="footer__menu-title">Legal Stuff</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">Disclaimer</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">Financing</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">Privacy Policy</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#!" class="footer__menu-link">Terms of Service</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__col">
+						<form class="footer__form">
+							<p class="footer__form-text">
+								knowing you're always on the best energy deal.
+							</p>
+							<input type="email" class="footer__form-email" />
+							<input
+								type="submit"
+								class="footer__form-submit btn"
+								value="Sign up Now"
+							/>
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>Made With Love By Lena R.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
